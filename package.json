@@ -1,0 +1,13 @@
+{
+  "name": "errsum",
+  "version": "0.1.0",
+  "description": "Error output summarizer - parse build/lint/test output, group similar errors, show unique patterns with counts",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"TODO: add tests\" && exit 0",
+    "lint": "echo \"TODO: add linter\" && exit 0",
+    "build": "echo \"TODO: add build\" && exit 0"
+  },
+  "private": true
+}
