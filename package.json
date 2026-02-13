@@ -1,13 +1,42 @@
 {
   "name": "errsum",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Error output summarizer - parse build/lint/test output, group similar errors, show unique patterns with counts",
   "main": "src/index.js",
+  "bin": {
+    "errsum": "src/index.js"
+  },
   "scripts": {
     "start": "node src/index.js",
-    "test": "echo \"TODO: add tests\" && exit 0",
-    "lint": "echo \"TODO: add linter\" && exit 0",
-    "build": "echo \"TODO: add build\" && exit 0"
+    "test": "node --test 'tests/*.test.js'",
+    "lint": "eslint src/ tests/",
+    "check": "npm run lint && npm test"
   },
-  "private": true
+  "keywords": [
+    "error",
+    "summarizer",
+    "parser",
+    "build",
+    "lint",
+    "test",
+    "output",
+    "cli",
+    "devtools",
+    "ci-cd"
+  ],
+  "author": "Brandon Wise",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonwise/errsum.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "src/"
+  ],
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  }
 }
